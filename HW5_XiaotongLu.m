@@ -1,4 +1,14 @@
 %HW5
+%GB comments
+1a 70 Missing an output image of the segmentation
+1b 100
+1c 70 No explanation of your resulting image
+1d 100
+2yeast: 90. Becareful in your script. You implement imfill to create img4_mark but you end up filling in the whole object because the edges were not previously well defined. I believe you could have just taken the complement of the image using the function imcomplement to achieve a similar goal. 
+2worm: 100
+2bacteria: 75 The segmentation could be significantly better. There are many tools you have learned in class. Expect to implement these tools to get better segmentation.
+2phase: 85 Illastik is not the best tool for all types of images. When you import your segmentation mask, you start with a very messy image. You have done your best to further segment, but you are still left with a lot of masks with “holes” in them and a lot of tiny masks that don’t contribute to any real objects in the image.  Many of the masks can be filled in using the function imfill on the final image and a lot of the mask debris (tiny spots) can be cleaned up using the function bwareaopen. With all this said, I think the question would have been best approached not using Illastik.
+Overall: 86
 
 % Note. You can use the code readIlastikFile.m provided in the repository to read the output from
 % ilastik into MATLAB.
